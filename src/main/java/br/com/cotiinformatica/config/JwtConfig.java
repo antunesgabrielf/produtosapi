@@ -23,6 +23,7 @@ public class JwtConfig extends WebSecurityConfigurerAdapter {
 				.authorizeRequests()				
 				.antMatchers(HttpMethod.POST, "/api/criar-conta").permitAll()
 				.antMatchers(HttpMethod.POST, "/api/login").permitAll()
+				.antMatchers(HttpMethod.POST, "/api/recuperar-senha").permitAll()
 				.antMatchers(HttpMethod.OPTIONS, "/**").permitAll() 
 				.anyRequest()
 				.authenticated();
